@@ -6,6 +6,8 @@
 [![Excel Support](https://img.shields.io/badge/Excel-.xlsx/.xls-orange.svg)](https://www.npmjs.com/package/exceljs)
 [![CSV Support](https://img.shields.io/badge/CSV-supported-orange.svg)](https://www.npmjs.com/package/exceljs)
 
+<img src="images.png" alt="图片描述" style="width:80%;" />
+
 ## 🔍 项目概述
 
 这是一个专业的基于DeepSeek大语言模型API的文件翻译服务，专门设计用于处理Excel和CSV文件中的结构化数据翻译需求。本项目能够智能识别文件主题领域，分析专业术语，并执行高精度的英文到中文翻译，同时保留原始文件的结构和格式。
@@ -19,7 +21,7 @@
 本项目在保证翻译质量的同时，通过多线程并行处理、智能缓存机制和高效的任务调度策略，显著提高了翻译效率，为用户节省大量人工翻译时间和成本。
 
 
-<img src="images.png" alt="图片描述" style="width:100%;" />
+
 
 ## ✨ 核心功能
 
