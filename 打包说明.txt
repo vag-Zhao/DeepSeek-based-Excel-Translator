@@ -1,0 +1,67 @@
+Excel翻译工具 - 打包说明
+=======================
+
+准备工作
+--------
+1. 确保已安装Node.js环境（开发时使用）
+2. 确保已安装项目依赖：npm install
+3. 确保已安装pkg工具：npm install -g pkg
+
+打包方法
+--------
+
+1. 使用自动打包脚本（推荐）:
+   ```
+   npm run package-script
+   ```
+   
+   这将自动执行完整的打包流程，包括:
+   - 编译TypeScript代码
+   - 创建示例文件
+   - 打包Windows/macOS/Linux可执行文件
+   - 准备分发文件结构
+   
+   打包结果将保存在 Release-Package 目录下，分为三个子目录:
+   - windows/ - Windows平台可执行文件及相关文件
+   - macos/ - macOS平台可执行文件及相关文件
+   - linux/ - Linux平台可执行文件及相关文件
+
+2. 手动打包特定平台:
+   ```
+   npm run build              # 编译TypeScript代码
+   npm run package-win        # 仅打包Windows版本
+   npm run package-mac        # 仅打包macOS版本
+   npm run package-linux      # 仅打包Linux版本
+   npm run package-all        # 打包所有平台版本
+   ```
+
+打包内容
+--------
+每个平台的发布包将包含：
+1. 可执行文件 (excel翻译工具.exe 或 excel翻译工具)
+2. .env 配置文件模板
+3. 使用说明.txt 文件
+4. samples/ 目录，包含示例文件
+5. output/ 目录，用于存放输出文件
+
+注意事项
+--------
+1. 打包前请确保 package.json 中配置正确：
+   - "bin" 字段指向正确的入口文件
+   - "pkg" 配置包含正确的 "assets" 和 "targets"
+
+2. .env 文件中的API密钥配置：
+   - 开发环境使用项目根目录的 .env 文件
+   - 发布版本中包含示例 .env 文件，但不包含真实API密钥
+   - 用户需要自行配置API密钥
+
+3. NodeJS版本兼容性：
+   - 打包时使用 node16 版本，确保广泛的兼容性
+   - 如需支持更新的Node功能，可在package.json中更新targets配置
+
+后期维护
+--------
+更新版本时:
+1. 更新 package.json 中的 "version" 字段
+2. 更新 src/index.ts 中的 VERSION 常量
+3. 重新执行打包流程 

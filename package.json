@@ -1,0 +1,52 @@
+{
+  "name": "trans",
+  "version": "1.0.0",
+  "description": "基于DeepSeek的Excel翻译服务",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "serve": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "pkg . --output build/excel翻译工具",
+    "package-win": "pkg . --targets node16-win-x64 --output build/excel翻译工具-windows.exe",
+    "package-mac": "pkg . --targets node16-macos-x64 --output build/excel翻译工具-macos",
+    "package-linux": "pkg . --targets node16-linux-x64 --output build/excel翻译工具-linux",
+    "package-all": "npm run build && npm run package-win && npm run package-mac && npm run package-linux",
+    "package-script": "node package-script.js"
+  },
+  "pkg": {
+    "assets": [
+      "dist/**/*",
+      "node_modules/**/*",
+      ".env"
+    ],
+    "targets": [
+      "node16-win-x64",
+      "node16-macos-x64",
+      "node16-linux-x64"
+    ],
+    "outputPath": "build"
+  },
+  "keywords": [
+    "excel",
+    "translation",
+    "deepseek",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.13.14",
+    "dotenv": "^16.4.7",
+    "exceljs": "^4.4.0",
+    "openai": "^4.90.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  }
+}
