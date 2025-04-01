@@ -6,7 +6,7 @@
 [![Excel Support](https://img.shields.io/badge/Excel-.xlsx/.xls-orange.svg)](https://www.npmjs.com/package/exceljs)
 [![CSV Support](https://img.shields.io/badge/CSV-supported-orange.svg)](https://www.npmjs.com/package/exceljs)
 
-<img src="images.png" alt="图片描述" style="width:80%;" />
+
 
 ## 🔍 项目概述
 
@@ -21,7 +21,9 @@
 本项目在保证翻译质量的同时，通过多线程并行处理、智能缓存机制和高效的任务调度策略，显著提高了翻译效率，为用户节省大量人工翻译时间和成本。
 
 
-
+<div style="width:100%; text-align:center">
+  <img src="images.png" alt="图片描述" style="width:70%;" />
+</div>
 
 ## ✨ 核心功能
 
