@@ -2,7 +2,7 @@
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js->=14.0.0-green.svg)](https://nodejs.org/)
-[![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Excel Support](https://img.shields.io/badge/Excel-.xlsx/.xls-orange.svg)](https://www.npmjs.com/package/exceljs)
 [![CSV Support](https://img.shields.io/badge/CSV-supported-orange.svg)](https://www.npmjs.com/package/exceljs)
 
